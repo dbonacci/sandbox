@@ -7,5 +7,6 @@ new Vue({
         proba: ''
     },
     methods: {
+        
     }
 });
