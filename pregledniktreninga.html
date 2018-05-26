@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Preglednik treninga</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<link href="pregledniktreninga.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <table id="pregledniktreninga">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Datum</th>
+                <th>Vrijeme</th>
+                <th>Mjesto</th>
+                <th>Voditelj</th>
+                <th>Uređivanje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="trening in treninzi">
+                <td>{{trening.id}}</td>
+                <td>{{trening.datum}}</td>
+                <td>{{trening.vrijeme}}</td>
+                <td>{{trening.mjesto}}</td>
+                <td>{{trening.voditelj}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="pregledniktreninga.js"></script>
+</body>
+</html>
