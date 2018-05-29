@@ -28,4 +28,14 @@ table tbody tr:nth-child(2n) td {
   background: #D4D8F9;
 }
 
-    
+.zakljucan td{
+  color: navy
+}
+
+.objavljen td{
+  color: green
+}
+
+.upripremi {
+  color: gold
+}

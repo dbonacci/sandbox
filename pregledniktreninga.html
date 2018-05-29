@@ -7,26 +7,28 @@
 <link href="pregledniktreninga.css" rel="stylesheet"/>
 </head>
 <body>
-
     <table id="pregledniktreninga">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Datum</th>
-                <th>Vrijeme</th>
-                <th>Mjesto</th>
-                <th>Voditelj</th>
-                <th>Uređivanje</th>
+                <th>datum</th>
+                <th>vrijeme</th>
+                <th>mjesto</th>
+                <th>voditelj</th>
+                <th>akcije</th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="trening in treninzi">
-                <td>{{trening.id}}</td>
-                <td>{{trening.datum}}</td>
+            <tr v-for="(trening, test) in treninzi" v-bind:class="trening.status">
+                <td>{{test + 1}} . {{trening.datum}}</td>
                 <td>{{trening.vrijeme}}</td>
                 <td>{{trening.mjesto}}</td>
                 <td>{{trening.voditelj}}</td>
-                <td><input type="button" value="spremi"></td>
+                <td>
+                    <button v-on:click="" v-show="trening.status != 'upripremi'">otvori</button>
+                    <button v-on:click="trening.status = 'upripremi'" v-show="trening.status != 'zakljucan'">uredi</button>
+                    <button v-on:click="trening.status = 'objavljen'" v-show="trening.status == 'upripremi'">objavi</button>
+                    <button v-on:click="trening.status = 'zakljucan'" v-show="trening.status == 'objavljen'">zaključaj</button>
+                </td>
             </tr>
         </tbody>
     </table>
