@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<app-zaglavlje></app-zaglavlje>
-		<app-preglednik v-bind:treninzi="treninzi"></app-preglednik>
+		<app-preglednik>			
+		</app-preglednik>
 		<app-podnozje></app-podnozje>
 	</div>
 </template>
@@ -18,37 +19,7 @@ export default {
 		'app-podnozje': Podnozje
 	},
  	data () {
-    	return {
-    		treninzi: [
-				{
-	     			datum: "2018-05-01", 
-		        	vrijeme: "08:00", 
-		        	mjesto: 'Svetice', 
-	    	    	voditelj: "Viktor Bankin",
-	        		status: "zakljucan"
-		    	},
-		    	{
-	    	    	datum: "2018-05-02", 
-	        		vrijeme: "16:00", 
-	        		mjesto: 'Svetice', 
-		        	voditelj: "Viktor Bankin",
-		        	status: "objavljen"
-	    		},
-		    	{
-		        	datum: "2018-05-02", 
-	    	    	vrijeme: "16:00", 
-	        		mjesto: 'Svetice', 
-	        		voditelj: "Viktor Bankin",
-		        	status: "upripremi"
-		    	},
-	    		{
-	        		datum: "2018-05-02", 
-	        		vrijeme: "16:00", 
-		        	mjesto: 'Svetice', 
-		        	voditelj: "Lucija Kolić",
-	    	    	status: "upripremi"
-	    		}
-			]
+    	return {    		
     	}
   	}  
 }
